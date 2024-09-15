@@ -1,0 +1,193 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1E1E1E;
+    border-bottom: 1px solid #3f3f3f;
+    
+}
+.logo img {
+    width: 60px;
+    padding: 5px;
+}
+.info {
+    display: flex;
+    align-items:center;
+    padding-right: 10px;
+    
+}
+.Notify {
+    text-align: center;
+    margin-right: 10px;
+   
+}
+.profile{
+    display: flex;
+    padding: 10px;
+    border-left: 1px solid #444;
+
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1b1b1b;
+    color: #dcdcdc;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    width: 90%;
+    
+}
+
+.chart {
+    background-color: #2C2C2C;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.chart h3 {
+    margin: 0 0 20px;
+    font-size: 18px;
+}
+
+#dwell-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: #00FF76;
+}
+canvas {
+    width: 100% !important;
+    max-height: 250px;
+}
+.dropdown-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.containers {
+    
+    width: 80%;
+    margin-left: 10%;
+    padding: 20px;
+}
+select {
+    padding: 10px;
+    background-color: #333;
+    color: #dcdcdc;
+    border: none;
+    border-radius: 5px;
+}
+
+.section h2 {
+    color: #a0a0a0;
+}
+
+
+.container {
+    width: 80%;
+    margin-left: 10%;
+    padding: 20px;
+}
+
+.dropdown-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.time-range-buttons {
+    margin-top: 20px;
+    text-align: right;
+    margin-right: 180px;
+}
+
+.time-range-buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #dcdcdc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.time-range-buttons button:hover {
+    background-color: #444;
+}
+.button {
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+.button1 {
+    background-color: #04AA6D; 
+    color: black; 
+    border: 2px solid #04AA6D;
+}
+  
+.button1:hover {
+    background-color: #04AA6D;
+    color: white;
+}
+.button1:hover {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+.button2 {
+    background-color: grey;
+    color: black;
+    
+    border: 2px solid #e7e7e7;
+}
+  
+.button2:hover {
+    background-color: #e7e7e7
+}
+/* Vertical menu  */
+
+ul {
+    
+    list-style-type: none;
+    margin: -634px 0px 0px -5px;
+    padding: 10px;
+    width: 60px;
+    height: 92vh;
+    background-color: #262626;
+    border-right:1px solid #3F3F3F ;
+    
+}
+
+li .I4 {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    
+}
+
+/* Change the link color on hover */
+li .I4:hover {
+    background-color: #555;
+    color: white;
+}
+.I4{
+    width: 30px;
+    display: flex;
+
+    
+}

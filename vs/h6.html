@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css6.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="Kaala1.png" alt="Logo" />
+        </div>
+        <div class="info">
+            <div class="Notify">
+               <img src="Notify.png" alt="" style="width: 30px;">
+            </div>
+            <div class="status-bar">
+                <img src="info.png" alt="" style="width: 30px;">
+                
+            </div>
+            <div class="profile">
+                <div class=" p1">
+                    <img src="man_4140048.png" alt="" style="width: 40px; padding-top: 7px;">
+                </div>
+                <div class="user-info">
+
+                    <p>@KaalaLabs</p>
+                </div>
+
+            </div>
+        </div>
+        
+    </header>
+    <div class="Analytics" style="margin-left: 215px; font-size: x-large; padding-top: 10px;">
+        <b>Analytics</b>
+    </div>
+
+    <div class="containers">
+        <!-- Dropdowns -->
+        <div class="dropdown-container">
+            <select id="arBillboardDropdown">
+                <option>AR Billboard 1</option>
+                <option>AR Billboard 2</option>
+            </select>
+           
+        </div>
+        <div class="buttonon" style="margin-left: 0px;">
+            <a href="h5.html"><button class="button button1">Device Wise</button></a>
+            <a href="h6.html"><button class="button button2">Advertisement wise</button></a>
+        </div>
+
+    
+    </div>
+    <h2 style="padding-left: 205px;">Viewer Engagement Metrics</h2>
+    <div class="time-range-buttons">
+        <button onclick="setTimeRange('hourly')">Hourly</button>
+        <button onclick="setTimeRange('daily')">Daily</button>
+        <button onclick="setTimeRange('weekly')">Weekly</button>
+        <button onclick="setTimeRange('monthly')">Monthly</button>
+    </div>
+
+
+
+
+
+
+    <div class="container">
+        <!-- Passer Count -->
+        <div class="chart">
+            <h3>Passer Count</h3>
+            <canvas id="passerCountChart"></canvas>
+        </div>
+        
+        <!-- Attention Rate -->
+        <div class="chart">
+            <h3>Attention Rate</h3>
+            <canvas id="attentionRateChart"></canvas>
+        </div>
+
+        <!-- Average Dwell Time -->
+        <div class="chart" id="dwell-time">
+            <div>
+                <h3>Average Dwell Time</h3>
+                <div>5 sec</div>
+            </div>
+        </div>
+    </div>
+    <ul>
+        <li><a href="h2.html"><img src="home.png" alt="" class = "I4"></a></li>
+        <li><a href="h3.html"><img src="inbox1.png" alt=""  class = "I4"></a></li>
+        <li><a href="#contact"><img src="satitcs.png" alt=""  class = "I4"></a></li>
+        <li><a href="h5.html"><img src="Bars.png" alt=""  class = "I4"></a></li>
+    </ul>
+
+    <script>
+        // Passer Count Bar Chart
+        const passerCountCtx = document.getElementById('passerCountChart').getContext('2d');
+        new Chart(passerCountCtx, {
+            type: 'bar',
+            data: {
+                labels: ['12 AM', '4 AM', '8 AM', '12 PM', '4 PM', '8 PM'],
+                datasets: [{
+                    label: 'People passing near AR device',
+                    data: [5, 10, 20, 30, 50, 45],
+                    backgroundColor: '#00FF76',
+                    borderWidth: 1,
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Attention Rate Line Chart
+        const attentionRateCtx = document.getElementById('attentionRateChart').getContext('2d');
+        new Chart(attentionRateCtx, {
+            type: 'line',
+            data: {
+                labels: ['12 AM', '4 AM', '8 AM', '12 PM', '4 PM', '8 PM'],
+                datasets: [{
+                    label: 'People stopping to look at AR device',
+                    data: [0.1, 0.2, 0.5, 0.8, 1, 0.9],
+                    borderColor: '#00FF76',
+                    borderWidth: 2,
+                    fill: false
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+   
+        
+</body>
+</html>

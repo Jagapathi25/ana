@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advertisement Dashboard</title>
+  <link rel="stylesheet" href="css7.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Advertisement List -->
+    <div class="ad-list">
+      <h2>Advertisement List</h2>
+      <button class="add-ad-btn">+ Add New Advertisement</button>
+      <table>
+        <thead>
+          <tr>
+            <th>Ad Name</th>
+            <th>Description</th>
+            <th>Image/Video</th>
+            <th>Ad Type</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="ad-table">
+          <!-- Example Row -->
+          <tr data-ad-id="1">
+            <td>Summer Sale</td>
+            <td>Discount on all summer clothing items.</td>
+            <td>summer_sale.jpg</td>
+            <td>AR</td>
+            <td><button class="view-analytics-btn">View Analytics</button></td>
+          </tr>
+          <!-- Add more rows here -->
+        </tbody>
+      </table>
+    </div>
+
+    <div class="dashboard">
+        <div class="header">
+            <h1>Analytics</h1>
+            <div class="ad-info">
+                <div><strong>Ad Name</strong>: Summer Sale</div>
+                <div><strong>Description</strong>: Discount on all summer clothing items.</div>
+                <div><strong>Image/Video</strong>: summer_sale.jpg</div>
+                <div><strong>Ad Type</strong>: AR</div>
+            </div>
+        </div>
+
+        <div class="overall-stats">
+            <div class="stat-card">
+                <h3>Average Dwell Time</h3>
+                <p class="value">5 sec</p>
+                <p>Average time viewer spent watching the advertisement</p>
+            </div>
+            <div class="stat-card">
+                <h3>Total Time Ad Played</h3>
+                <p class="value">120 Hours</p>
+                <p>Total time advertisement played</p>
+            </div>
+        </div>
+
+        <h2>Analytics with different time periods</h2>
+        <div class="tabs">
+            <button class="tab-button active" onclick="showTab('hourly')">Hourly</button>
+            <button class="tab-button" onclick="showTab('daily')">Daily</button>
+            <button class="tab-button" onclick="showTab('weekly')">Weekly</button>
+            <button class="tab-button" onclick="showTab('monthly')">Monthly</button>
+        </div>
+
+        <div id="hourly" class="tab-content active" style="    display: grid;grid-template-columns: auto auto; gap: 100px;">
+            <div class="stat-card">
+                <h3>Average Dwell Time</h3>
+                <p class="value">5 sec</p>
+            </div>
+            <div class="stat-card">
+                <h3>Passer Count</h3>
+                <div class="chart-placeholder">[Graph Here]</div>
+            </div>
+            <div class="stat-card">
+                <h3>Total Time Ad Played</h3>
+                <p class="value">20 min</p>
+            </div>
+            <div class="stat-card">
+                <h3>Attention Rate</h3>
+                <div class="chart-placeholder">[Graph Here]</div>
+            </div>
+        </div>
+
+        <!-- Add content for other tabs (daily, weekly, monthly) here -->
+    </div>
+
+  <script src="js7.js"></script>
+</body>
+</html>

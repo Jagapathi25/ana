@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Dashboard</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="Kaala1.png" alt="Logo" />
+        </div>
+        <div class="info">
+            <div class="Notify">
+               <img src="Notify.png" alt="" style="width: 30px;">
+            </div>
+            <div class="status-bar">
+                <img src="info.png" alt="" style="width: 30px;">
+                
+            </div>
+            <div class="profile">
+                <div class=" p1">
+                    <img src="man_4140048.png" alt="" style="width: 40px; padding-top: 7px;">
+                </div>
+                <div class="user-info">
+
+                    <p>@KaalaLabs</p>
+                </div>
+
+            </div>
+        </div>
+        
+        
+    </header>
+    <div class="Decives">
+        <h1 >Decives Lists</h1>
+        <div class="action-buttons">
+            <button class="delete" style="background-color: #333;color: aliceblue;padding: 8px 16px; border-radius: 4px;
+            cursor: pointer; border: none;">&#128465;</button>
+            <button class="action-button edit">&#9998;</button>
+            <button class="action-button add-device" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">+ Add Device</button>
+            <div id="id01" class="modal">
+  
+                <form class="modal-content animate" action="/action_page.php" method="post">
+                  <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                   
+                  </div>
+              
+                  <div class="container">
+                    <h1  style="border-bottom: 2px solid whitesmoke;margin-top: -25px; padding: 10px;">Add Devices</h1>
+                    <label for="uname" class="Text1"><b>Device Name</b></label>
+                    <input type="text" placeholder="Enter Device name" name="uname"  onfocus="this.value=''" required>
+              
+                    <label for="psw" class="Text2"><b>Id</b></label>
+                    <input type="text" placeholder="Enter Id" name="psw" onfocus="this.value=''" required>
+                    
+                     <label for="psw" class="Text3"><b>Location</b></label>
+                    <input type="text" placeholder="Enter Location" name="psw"  onfocus="this.value=''"required>
+                      
+                    <button type="submit" style="padding: 10px; margin-left: 650px; border: none; background-color: #54986f;">Add Devices</button>
+                   
+                  </div>
+              
+                  <div class="container1"  style="margin-top: -120px; padding:20px;">
+                    <button  class="exit" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    
+                  </div>
+                </form>
+              </div>
+              <script>
+                // Get the modal
+                var modal = document.getElementById('id01');
+                
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+                </script>
+        </div>
+    </div>
+    <!-- search button  -->
+
+    <div class="controls">
+        <div class="search-container">
+            <input type="text" placeholder="Search" id="search-input">
+            <button class="search-button">&#128269;</button>
+          
+            
+        </div>
+        <select class="dropdown">
+            <option value="">Location</option>
+            <!-- Add options as needed -->
+        </select>
+        <select class="dropdown">
+            <option value="">Status</option>
+            <!-- Add options as needed -->
+        </select>
+    </div>
+
+
+    <!-- Table  -->
+    <p class="table-title" style="padding:10px; margin-left:100px ; color: #333;">#124 Devices</p>
+
+
+
+   
+    
+    
+
+
+  
+     <!-- vertical menu  -->
+    <div class="nav">
+        <ul>
+            <li><a href="h2.html"><img src="home.png" alt="" class = "I4"></a></li>
+            <li><a href="h3.html"><img src="inbox1.png" alt=""  class = "I4"></a></li>
+            <li><a href="#contact"><img src="satitcs.png" alt=""  class = "I4"></a></li>
+            <li><a href="h5.html"><img src="Bars.png" alt=""  class = "I4"></a></li>
+        </ul>
+    </div>
+
+    <div class="table-container">
+        
+        <table class="devices-table">
+            <thead>
+                <tr>
+                    <th><input type="checkbox" id="select-all"></th>
+                    <th>Name</th>
+                    <th>ID</th>
+                    <th>Location</th>
+                    <th>Status</th>
+                    <th>Installation date</th>
+                    <th>Running Ads</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Example rows -->
+                <tr>
+                    <td><input type="checkbox" class="row-checkbox"></td>
+                    <td>AR Billboard 1</td>
+                    <td>AR001</td>
+                    <td>Mumbai</td>
+                    <td>Active</td>
+                    <td>2023-01-15</td>
+                    <td>5 Ads</td>
+                    <td><button class="view-button">View</button></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="row-checkbox"></td>
+                    <td>AR Display 2</td>
+                    <td>AR002</td>
+                    <td>Delhi</td>
+                    <td>Active</td>
+                    <td>2022-10-05</td>
+                    <td>7 Ads</td>
+                    <td><button class="view-button">View</button></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="row-checkbox"></td>
+                    <td>AR Display 2</td>
+                    <td>AR002</td>
+                    <td>Delhi</td>
+                    <td>Active</td>
+                    <td>2022-10-05</td>
+                    <td>7 Ads</td>
+                    <td><button class="view-button">View</button></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="row-checkbox"></td>
+                    <td>AR Display 2</td>
+                    <td>AR002</td>
+                    <td>Delhi</td>
+                    <td>Active</td>
+                    <td>2022-10-05</td>
+                    <td>7 Ads</td>
+                    <td><button class="view-button">View</button></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="row-checkbox"></td>
+                    <td>AR Display 2</td>
+                    <td>AR002</td>
+                    <td>Delhi</td>
+                    <td>Active</td>
+                    <td>2022-10-05</td>
+                    <td>7 Ads</td>
+                    <td><button class="view-button">View</button></td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+
+            // Select all rows when the "Select All" checkbox is checked
+            document.getElementById('select-all').addEventListener('change', function() {
+                const checkboxes = document.querySelectorAll('.row-checkbox');
+                checkboxes.forEach(checkbox => checkbox.checked = this.checked);
+            });
+
+            // Delete selected rows when the "Delete Selected" button is clicked
+            document.querySelector('.delete').addEventListener('click', function() {
+                const selectedCheckboxes = document.querySelectorAll('.row-checkbox:checked');
+                selectedCheckboxes.forEach(checkbox => {
+                    const row = checkbox.closest('tr');
+                    row.remove();
+                });
+
+                // Optionally, you can uncheck the "Select All" checkbox after deletion
+                document.getElementById('select-all').checked = false;
+            });
+
+            // Add a view button functionality example
+            document.querySelectorAll('.view-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    alert('View button clicked for: ' + this.closest('tr').children[1].innerText);
+                });
+            });
+
+            });
+        </script>
+    </div>
+
+
+    <script src="scripts3.js"></script>
+
+
+    
+
+
+</body>
+</html>

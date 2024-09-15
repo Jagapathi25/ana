@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1F1F1F;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .dashboard {
+            background-color: #292929;
+            border-radius: 10px;
+            padding: 20px;
+            width: 700px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+        .total-devices {
+            display: flex;
+            align-items: center;
+            background-color: #5BB385;
+            padding: 20px;
+            border-radius: 10px;
+            width: 150px;
+            justify-content: center;
+            margin-right: 20px;
+        }
+        .total-devices img {
+            width: 30px;
+            margin-right: 10px;
+        }
+        .total-devices h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+        .status-bar {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+        }
+        .bar-segment {
+            height: 20px;
+            border-radius: 5px;
+        }
+        .active-devices {
+            background-color: #5BB385;
+            width: calc(44 / 120 * 100%);
+        }
+        .inactive-devices {
+            background-color: #DB4D4D;
+            width: calc(34 / 120 * 100%);
+            margin-left: 2px;
+        }
+        .under-maintenance {
+            background-color: #9B9B9B;
+            width: calc(42 / 120 * 100%);
+            margin-left: 2px;
+        }
+        .status-text {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding-top: 10px;
+            font-size: 14px;
+        }
+        .status-text div {
+            text-align: center;
+        }
+        .status-text .inactive-devices {
+            color: #DB4D4D;
+        }
+        .status-text .under-maintenance {
+            color: #9B9B9B;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="total-devices">
+            <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" alt="Devices Icon">
+            <div>
+                <h1>120</h1>
+                <p>Total Devices</p>
+            </div>
+        </div>
+        <div class="status-bar">
+            <div class="bar-segment active-devices"></div>
+            <div class="bar-segment inactive-devices"></div>
+            <div class="bar-segment under-maintenance"></div>
+        </div>
+    </div>
+    <div class="status-text">
+        <div>44 Active Devices</div>
+        <div class="inactive-devices">34 Inactive Devices</div>
+        <div class="under-maintenance">42 Under Maintenance</div>
+    </div>
+</body>
+</html>
